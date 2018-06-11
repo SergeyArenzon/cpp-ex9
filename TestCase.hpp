@@ -13,6 +13,7 @@ public:
 void print();
 TestCase(string s,ostream& os);
 
+
 template <typename T>
 TestCase check_equal(const T &t, const T &u){
 if((T)t==(T)u)passed++;
@@ -23,12 +24,14 @@ failed++;
 return *this;
 }
 
+
  template<typename T>
 TestCase check_different(const T &t, const T &u){
 if((T)t!=(T)u){
 passed++;
 } else{
     failed++;
+    *os<<s+": Failure in test #"<<(failed+passed)<<":"<<t<<" should equal "<<u<<"!"<<endl;
 }
 return *this;
 }
