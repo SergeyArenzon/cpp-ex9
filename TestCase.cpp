@@ -1,4 +1,3 @@
-
 #include "TestCase.hpp"
 
 
@@ -10,9 +9,7 @@ this->passed = 0;
 this->failed = 0;
 }
 void TestCase::print(){
-*os<<s<<": "<<failed<<", "<<passed<<", "<<failed+passed<<" total."<<endl;
+*os<<s<<": "<<failed<<" "<<"failed"<<", "<<passed<<" "<<"passed"<<", "<<failed+passed<<" total."<<endl;
 cout<< "---"<<endl;
 
 }
-
-
